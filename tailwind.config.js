@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      Libre_Baskerville: ['Libre Baskerville', 'serif'],
+    },
   },
   plugins: [],
 }
