@@ -40,7 +40,7 @@ const Project = () => {
       initial="hidden"
       animate="visible"
     >
-      <div className='relative w-full h-screen max-w-6xl mx-auto px-8 pt-20 lg:py-20 flex flex-col items-center justify-center gap-16 lg:flex-row lg:gap-0'>
+      <div className='relative w-full h-screen max-w-6xl mx-auto px-8 py-20 lg:py-20 flex flex-col items-center justify-center gap-16 lg:flex-row lg:gap-0'>
 
         <ImageCarousel
           images={project.images.map(image => ({ src: image }))}
