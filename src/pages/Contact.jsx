@@ -63,7 +63,7 @@ const Contact = () => {
         animate="visible"
       >
         <motion.div className="flex flex-wrap justify-start gap-3">
-          {['80+ Renders', '100+ Projects', '50+ Clients', '3 Year of Experience'].map((stat) => (
+          {['80+ Renders', '35+ Projects', '10+ Clients', '3 Year of Experience'].map((stat) => (
             <motion.span
               key={stat}
               className="px-6 py-4 lg:px-10 lg:py-5 bg-gray-100 rounded-full cursor-default hover:bg-gray-200 transition-colors"

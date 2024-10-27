@@ -38,20 +38,21 @@ const Project = () => {
       initial="hidden"
       animate="visible"
     >
-      <div className='relative w-full max-w-6xl mx-auto px-8 pt-20 lg:py-20 flex flex-col gap-16 lg:flex-row lg:gap-0'>
+      <div className='relative w-full h-screen max-w-6xl mx-auto px-8 pt-20 lg:py-20 flex flex-col items-center justify-center gap-16 lg:flex-row lg:gap-0'>
 
         <ImageCarousel
           images={project.images.map(image => ({ src: image }))}
           projectView={true}
         />
 
-        <motion.div variants={itemVariants} className="flex flex-row lg:flex-col justify-between w-full lg:w-1/3 bg-gradient-to-b from-gray-200 to-gray-100 p-0 lg:p-5 rounded-3xl z-10">
+        <motion.div variants={itemVariants} className="flex flex-row lg:flex-col flex-shrink-0 lg:h-full justify-between w-full lg:w-1/3 bg-gradient-to-b from-gray-200 to-gray-100 p-0 lg:p-5 rounded-3xl z-10">
           <h1 className='flex-shrink-0 text-center text-xl px-8 py-5 font-medium rounded-3xl bg-gray-300 text-black'>{project.name}</h1>
+          <p className="hidden lg:block">{project.description}</p>
           <Link to={'/'}>
             <motion.div className="flex-shrink-0 text-center p-5 rounded-3xl bg-black text-white w-fit lg:w-full cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}>
-              Back to Home
+              Home
             </motion.div></Link>
         </motion.div>
       </div>

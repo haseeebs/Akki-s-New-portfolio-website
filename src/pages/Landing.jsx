@@ -49,7 +49,7 @@ const Landing = () => {
 
     return (
         <motion.div 
-            className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col justify-between py-20 lg:py-14 px-8 md:px-20"
+            className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col justify-evenly py-20 lg:py-14 px-8 md:px-20"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

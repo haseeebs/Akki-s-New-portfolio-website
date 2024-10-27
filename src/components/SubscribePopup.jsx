@@ -37,12 +37,11 @@ const SubscribePopup = ({ onClose }) => {
 
   const options = [
     { value: '', label: 'Select a service' },
-    { value: 'Interior design', label: 'Interior design' },
-    { value: 'Exterior design', label: 'Exterior design' },
-    { value: '3D modeling', label: '3D modeling' },
-    { value: 'Rendering', label: 'Rendering' },
-    { value: 'Texturing', label: 'Texturing' },
-    { value: 'Walk through', label: 'Walk through' },
+    { value: 'Interior Commercial', label: 'Interior Commercial' },
+    { value: 'Interior Residential', label: 'Interior Residential' },
+    { value: 'Only Rendering', label: 'Only Rendering' },
+    { value: 'Interior Commercial', label: 'Interior Commercial' },
+    { value: 'Exterior Residential', label: 'Exterior Residential' },
   ];
 
   useEffect(() => {
