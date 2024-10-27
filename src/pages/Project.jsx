@@ -1,27 +1,16 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
 import projectsData from '../data/projectsData';
+import ProjectCard from '../components/ProjectCard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 100
+      staggerChildren: 0.2
     }
   }
 };
@@ -30,7 +19,20 @@ const Project = () => {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === Number(id));
 
-  if (!project) return <h1>Project not found</h1>
+  if (!project) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">Project Not Found</h1>
+          <Link to="/">
+            <button className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+              Go Back Home
+            </button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <motion.div
@@ -45,19 +47,10 @@ const Project = () => {
           projectView={true}
         />
 
-        <motion.div variants={itemVariants} className="flex flex-row lg:flex-col flex-shrink-0 lg:h-full justify-between w-full lg:w-1/3 bg-gradient-to-b from-gray-200 to-gray-100 p-0 lg:p-5 rounded-3xl z-10">
-          <h1 className='flex-shrink-0 text-center text-xl px-8 py-5 font-medium rounded-3xl bg-gray-300 text-black'>{project.name}</h1>
-          <p className="hidden lg:block">{project.description}</p>
-          <Link to={'/'}>
-            <motion.div className="flex-shrink-0 text-center p-5 rounded-3xl bg-black text-white w-fit lg:w-full cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.95 }}>
-              Home
-            </motion.div></Link>
-        </motion.div>
+        <ProjectCard project={project} />
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
