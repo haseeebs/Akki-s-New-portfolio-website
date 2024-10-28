@@ -62,7 +62,7 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="flex flex-wrap justify-start gap-3">
+        <motion.div className="flex flex-wrap justify-start gap-2 lg:gap-3">
           {['80+ Renders', '35+ Projects', '10+ Clients', '3 Year of Experience'].map((stat) => (
             <motion.span
               key={stat}

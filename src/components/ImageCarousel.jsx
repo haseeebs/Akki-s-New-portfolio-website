@@ -93,7 +93,15 @@ const ImageCarousel = ({
               <img
                 src={image.src}
                 alt={`Slide ${index + 1}`}
-                className={`w-full ${projectView ? 'min-h-[28rem] max-h-[28rem] lg:h-full lg:max-w-md mx-auto' : 'h-[25rem] lg:h-80'} object-cover rounded-3xl ${!image.link ? 'cursor-zoom-in' : 'cursor-pointer'}`}
+                className={`w-full 
+                  ${projectView
+                    ? 'min-h-[28rem] max-h-[28rem] lg:h-full lg:max-w-md mx-auto'
+                    : 'h-[25rem] lg:h-80 2xl:h-96'} 
+                  object-cover rounded-3xl 
+                  ${!image.link
+                    ? 'cursor-zoom-in'
+                    : 'cursor-pointer'
+                  }`}
                 onClick={() => handleImageClick(image, index)}
                 loading="lazy" // Lazy loading attribute
               />

@@ -59,7 +59,7 @@ const Landing = () => {
                 variants={itemVariants}
             >
                 <motion.h1 
-                    className="text-5xl md:text-6xl font-bold mb-4 text-gray-800"
+                    className="text-5xl md:text-6xl 2xl:text-7xl font-bold mb-4 text-gray-800"
                     variants={itemVariants}
                 >
                     We Turn Your Dreams into Reality
